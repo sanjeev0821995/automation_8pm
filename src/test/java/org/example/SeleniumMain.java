@@ -20,6 +20,7 @@ public class SeleniumMain {
         driver.findElement(By.cssSelector("img[alt='3 - Fruits & Vegetables']")).click();
         List<WebElement> elements =driver.findElements(By.cssSelector("div[class*='Product__UpdatedDetailContainer']"));
         System.out.println(elements.size());
+        System.out.println("Hello");
 
     }
 }
