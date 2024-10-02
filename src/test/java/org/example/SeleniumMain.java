@@ -21,6 +21,7 @@ public class SeleniumMain {
         List<WebElement> elements =driver.findElements(By.cssSelector("div[class*='Product__UpdatedDetailContainer']"));
         System.out.println(elements.size());
         System.out.println("Hello");
+        //
 
     }
 }
