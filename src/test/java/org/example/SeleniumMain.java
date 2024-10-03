@@ -20,8 +20,16 @@ public class SeleniumMain {
         driver.findElement(By.cssSelector("img[alt='3 - Fruits & Vegetables']")).click();
         List<WebElement> elements =driver.findElements(By.cssSelector("div[class*='Product__UpdatedDetailContainer']"));
         System.out.println(elements.size());
-        System.out.println("Hello");
-        //
+        Thread.sleep(3000);
+        for(int i=0;i<elements.size();i++){
+            if(elements.get(i).getText().contains("Ginger (Adrak)")){
+                WebElement element =elements.get(i);
+                element.findElement(By.cssSelector("div[class*='AddToCart__UpdatedButtonContainer']")).click();
+                WebElement plus=element.findElement(By.cssSelector("div[class*='AddToCart___StyledDiv2']"));
+                for(int k=0;k<3;k++)
+                    plus.click();
+            }
+        }
 
     }
 }
